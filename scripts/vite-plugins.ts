@@ -117,7 +117,7 @@ function headTags(publicDir: string): HtmlTagDescriptor[] {
   // Only advertise a preview image that exists, so link previews never point at a 404.
   if (hasOgImage) {
     const image = `${site.url}${OG_IMAGE}`
-    const alt = `${profile.name} — ${profile.role}`
+    const alt = `${profile.name}, ${profile.role}`
     tags.push(
       meta({ property: 'og:image', content: image }),
       meta({ property: 'og:image:width', content: '1200' }),

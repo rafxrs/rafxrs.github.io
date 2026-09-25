@@ -101,7 +101,7 @@ export function ContactForm({ endpoint }: { endpoint: string }) {
         <span className="grid size-10 place-items-center rounded-full bg-positive/15 text-positive">
           <CheckIcon className="size-5" />
         </span>
-        <p className="mt-5 text-xl font-semibold tracking-tight text-fg">Thanks — your message was sent.</p>
+        <p className="mt-5 text-xl font-semibold tracking-tight text-fg">Thanks, your message was sent.</p>
         <p className="mt-2 text-[15px] leading-relaxed text-fg-muted">I’ll reply to the email address you gave.</p>
         <button type="button" onClick={() => setStatus('idle')} className={buttonClasses('secondary', 'sm', 'mt-6')}>
           Send another message

@@ -26,7 +26,7 @@ import type {
 
 export const site: Site = {
   url: 'https://rafxrs.github.io',
-  title: 'Rafael Reis — Applied ML Engineer',
+  title: 'Rafael Reis | Applied ML Engineer',
   description:
     'Applied ML engineer (M.Eng in Applied AI, McGill) working on deep RL, LLM evaluation, and neuroimaging data pipelines. Open to ML internships, Summer 2027.',
   sourceRepo: 'https://github.com/rafxrs/rafxrs.github.io',
@@ -90,10 +90,6 @@ export const highlights: Highlight[] = [
     value: '3',
     unit: 'research & industry teams',
     caption: 'The Neuro, Network Dynamics Lab (McGill), CN Cybersecurity (CISO)',
-  },
-  {
-    value: '3rd place',
-    caption: 'McGameJam 2024, 48-hour game development hackathon',
   },
   {
     value: 'FR · DE · EN',
@@ -271,7 +267,7 @@ export const projects: Project[] = [
     // TODO: add a demo link here once one exists (e.g. an in-browser ONNX version).
     details: {
       problem:
-        'Learn to play chess from the rules alone — no human games or handcrafted evaluation — which requires combining search with a learned policy and value function under a tight compute budget.',
+        'Learn to play chess from the rules alone (no human games or handcrafted evaluation), which requires combining search with a learned policy and value function under a tight compute budget.',
       approach: [
         'Residual CNN with batch normalization taking a 19-plane 8×8 board encoding, with policy and value heads.',
         'Monte Carlo Tree Search with UCB exploration guided by the network.',

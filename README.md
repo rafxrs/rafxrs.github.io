@@ -1,6 +1,6 @@
 # rafxrs.github.io
 
-Personal portfolio of Rafael Reis — applied ML engineer. Live at **https://rafxrs.github.io**.
+Personal portfolio of Rafael Reis, applied ML engineer. Live at **https://rafxrs.github.io**.
 
 Built with Vite, React, TypeScript, Tailwind CSS and Framer Motion. The page is prerendered to
 static HTML at build time and deployed to GitHub Pages by GitHub Actions.
@@ -36,7 +36,7 @@ in `src/data/types.ts`.
 | `contactLinks` | GitHub, LinkedIn, email (used in the hero, contact section, and metadata)       |
 | `nav`          | Navbar links                                                                    |
 | `sections`     | Section eyebrows, headings, and intro lines                                     |
-| `highlights`   | The four tiles under the hero (the first one is the large tile)                 |
+| `highlights`   | The tiles under the hero; the first one is the large tile (3 or 4 tiles)        |
 | `projects`     | Featured project cards; the first is the flagship tile                          |
 | `research`     | The research highlight section                                                  |
 | `experience`   | Timeline entries, most recent first                                             |

@@ -105,7 +105,7 @@ function CopyEmailButton({ email }: { email: string }) {
         <span className="sr-only">Copy email address</span>
       </button>
       <span role="status" className="sr-only">
-        {state === 'copied' ? 'Email address copied' : state === 'failed' ? 'Couldn’t copy — select the address instead' : ''}
+        {state === 'copied' ? 'Email address copied' : state === 'failed' ? 'Couldn’t copy. Select the address instead.' : ''}
       </span>
     </>
   )

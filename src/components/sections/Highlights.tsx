@@ -5,16 +5,15 @@ import { Container } from '../layout/Container'
 import { ArrowRightIcon } from '../ui/Icons'
 
 /**
- * Asymmetric bento: the first tile spans two rows on large screens, the rest fill in around
- * it. Tiles beyond the fourth fall back to a plain span. The ribbon sits at the fold, so it
- * fades in on load (CSS, before hydration) rather than on scroll.
+ * Asymmetric bento: on large screens the first tile spans two rows and the others fill in
+ * beside it, with a layout for three tiles and one for four. Other counts fall back to thirds.
+ * The ribbon sits at the fold, so it fades in on load (CSS, before hydration), not on scroll.
  */
-const TILE_LAYOUT = [
-  'sm:col-span-2 lg:col-span-5 lg:row-span-2',
-  'sm:col-span-2 lg:col-span-7',
-  'lg:col-span-3',
-  'lg:col-span-4',
-]
+const LAYOUTS: Record<number, string[]> = {
+  3: ['sm:col-span-2 lg:col-span-5 lg:row-span-2', 'sm:col-span-2 lg:col-span-7', 'sm:col-span-2 lg:col-span-7'],
+  4: ['sm:col-span-2 lg:col-span-5 lg:row-span-2', 'sm:col-span-2 lg:col-span-7', 'lg:col-span-3', 'lg:col-span-4'],
+}
+const TILE_LAYOUT = LAYOUTS[highlights.length] ?? []
 
 export function Highlights() {
   return (
