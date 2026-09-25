@@ -1,0 +1,67 @@
+# Builds the site and publishes it to GitHub Pages on every push to main.
+#
+# One-time setup: in the rafxrs.github.io repository, open Settings → Pages and set
+# "Build and deployment → Source" to "GitHub Actions".
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# The deploy job needs to write to Pages and prove its identity with an OIDC token.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Run one deployment at a time, and let an in-progress one finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v5
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # Includes the content checks: no placeholder text, no dead links, consistent eval tables.
+      - name: Test
+        run: npm test
+
+      # Type-checks, builds, and prerenders the page (see scripts/prerender.mjs).
+      - name: Build
+        run: npm run build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
