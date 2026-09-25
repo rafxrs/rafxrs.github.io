@@ -41,7 +41,7 @@ export const profile: Profile = {
   availability: 'Open to ML internships · Summer 2027',
   focusAreas: ['Deep Reinforcement Learning', 'LLM Evaluation', 'Neuroimaging Data', 'MLOps'],
   pitch:
-    'I build and rigorously evaluate ML systems — from reinforcement learning agents to LLM evaluation pipelines and neuroimaging tools — with the DevOps background to ship them.',
+    'I build and rigorously evaluate ML systems, from reinforcement learning agents to LLM evaluation pipelines and neuroimaging tools, with the DevOps background to ship them.',
   cv: '/Rafael_Reis_CV.pdf',
 }
 
@@ -65,7 +65,7 @@ export const sections = {
     eyebrow: 'Work',
     title: 'Featured projects',
     intro:
-      'Start with Domibot — its write-up traces the path from a plateaued AlphaZero-style agent to PPO, including the fixes that didn’t work.',
+      'Domibot: A deep reinforcement learning agent for the game Dominion. Its write-up traces the path from a plateaued AlphaZero-style agent to PPO, including the fixes that didn’t work.',
   },
   research: { eyebrow: 'Research', title: 'Neuroimaging pipelines at The Neuro' },
   experience: { eyebrow: 'Timeline', title: 'Experience & education' },
@@ -75,7 +75,7 @@ export const sections = {
     eyebrow: 'Contact',
     title: 'Get in touch',
     intro:
-      'If you’re hiring for an ML internship — or want to talk RL, LLM evaluation, or neuroimaging pipelines — I’d be glad to hear from you.',
+      'If you’re hiring for an ML internship or want to talk RL, LLM evaluation, or neuroimaging pipelines, I’d be very glad to hear from you.',
   },
 } satisfies Record<string, SectionCopy>
 
@@ -218,7 +218,7 @@ export const projects: Project[] = [
           'Eval win rate from a fresh network to domibot2.1 (20-game evals, rolling mean of 10). Dotted lines mark the warm restart (LR decay, entropy up) and the opponent pool.',
       },
       limitations: [
-        'The diagnosis was credit assignment — Monte-Carlo value targets buried the payoff of deferred-reward cards, and pure self-play never rewarded the climb from a half-built engine, so it needed a different algorithm rather than another patch.',
+        'The diagnosis was credit assignment: Monte-Carlo value targets buried the payoff of deferred-reward cards, and pure self-play never rewarded the climb from a half-built engine, so it needed a different algorithm rather than another patch.',
         'A recent-checkpoint opponent pool gave mixed results, likely due to low diversity.',
         'Next steps: privileged critic, wider opponent pool, longer runs.',
       ],
@@ -291,7 +291,7 @@ export const projects: Project[] = [
 
 export const research: ResearchHighlight = {
   framing:
-    'In health and neuroscience research, analysis code is part of the method — when it’s slow or irreproducible, it limits what can be tested and trusted.',
+    'In health and neuroscience research, analysis code is a huge part of the method. If it’s slow or irreproducible, it limits what can be tested and trusted.',
   role: 'Undergraduate Research Assistant',
   org: 'Dr. Amir Shmuel’s lab, Montreal Neurological Institute (The Neuro), McGill',
   dates: 'May–Aug 2025',
