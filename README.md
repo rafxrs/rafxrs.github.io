@@ -54,8 +54,8 @@ timeline and `resultsTable` adds the evaluation table with confidence intervals.
 **Open TODOs** (marked `// TODO` in `content.ts`):
 
 - Chess engine: `results`, `limitations`, and the media file (see below).
-- Counterspeech project: `limitations`, if you want to share them.
 - Formspree form ID (see below).
+- Adding onnx for in browser project-demos.
 
 `npm test` enforces the content rules. It fails on placeholder text (`[ADD`, `TODO`, lorem
 ipsum), links that aren't `https://`, `mailto:`, or a real in-page anchor, and evaluation rows

@@ -32,6 +32,7 @@ async function inlineStylesheets(html) {
   return html
 }
 
+// Render the app into dist/index.html, so content and layout arrive with the first response (faster first paint, crawlable text); React then hydrates it in the browser.
 const template = await inlineStylesheets(await readFile(path.join(distDir, 'index.html'), 'utf8'))
 if (!template.includes(PLACEHOLDER)) {
   throw new Error(`dist/index.html has no ${PLACEHOLDER} placeholder to render into.`)

@@ -36,7 +36,7 @@ export const profile: Profile = {
   name: 'Rafael Reis',
   initials: 'RR',
   role: 'Applied ML Engineer',
-  affiliation: 'M.Eng in Applied AI @ McGill University',
+  affiliation: 'M.Eng Student in Applied AI @ McGill University',
   location: 'Montreal, QC',
   availability: 'Open to ML internships · Summer 2027',
   focusAreas: ['Deep Reinforcement Learning', 'LLM Evaluation', 'Neuroimaging Data', 'MLOps'],
@@ -103,13 +103,13 @@ export const projects: Project[] = [
     title: 'Domibot: Deep RL Agent for Dominion',
     kicker: 'Flagship · Deep RL',
     summary:
-      'A full Dominion game engine and a self-play RL agent that learned multi-step deck-building strategy after an AlphaZero-style approach plateaued.',
+      'A full Dominion game engine and a self-play RL agent that learned multi-step deck-building strategy in a complex, partially observable environment.',
     tags: ['Python', 'PyTorch', 'PPO', 'GAE', 'MCTS', 'Self-Play', 'Pygame', 'pytest'],
     links: [
       { label: 'GitHub', href: 'https://github.com/rafxrs/domibot', icon: 'github' },
       {
         label: 'Model checkpoint',
-        href: 'https://github.com/rafxrs/domibot/releases/tag/domibot2.1',
+        href: 'https://github.com/rafxrs/domibot/releases/tag/domibot2.2',
         icon: 'package',
       },
     ],
@@ -231,7 +231,7 @@ export const projects: Project[] = [
     tags: ['Python', 'GPT-4.1-mini', 'OpenAI API', 'Prompt Engineering', 'LLM Evaluation'],
     codeNotPublic: true,
     keyResult: {
-      text: 'In the blinded comparison, annotators preferred the fine-tuned model’s responses overall.',
+      text: 'In the blinded comparison, annotators preferred the fine-tuned model’s responses 74% of the time.',
       note: 'Exact figures are withheld while the work is under review.',
     },
     details: {
@@ -243,7 +243,7 @@ export const projects: Project[] = [
         'Processed large-scale hate speech datasets and engineered prompts and metrics to compare outputs at scale.',
       ],
       results: [
-        'In the blinded comparison, annotators preferred the fine-tuned model’s responses overall. Exact figures are withheld while the work is under review.',
+        'In the blinded comparison, annotators preferred the fine-tuned model’s responses 74% of the time. Exact figures are withheld while the work is under review.',
       ],
       // TODO: add `limitations: ['…']` once you want to share them — the section appears automatically.
     },
